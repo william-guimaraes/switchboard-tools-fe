@@ -1,0 +1,1 @@
+export { ZendeskConfig } from './zendesk-config'
