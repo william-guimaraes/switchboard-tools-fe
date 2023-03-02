@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Typography } from 'antd'
+import { Button, Space, Typography } from 'antd'
 import { CredentialsModal } from './credentials-modal'
 import { SubdomainModal } from './subdomain-modal'
 
@@ -13,16 +13,18 @@ export const ZendeskConfig = () => {
         <>
             <S.Container>
                 <Typography.Title level={3}>Zendesk Configuration</Typography.Title>
-                <Button
-                    onClick={() => setIsCredentialsModalOpen(true)}
-                >
-                    Set Credentials
-                </Button>
-                <Button
-                    onClick={() => setIsSubdomainModalOpen(true)}
-                >
-                    Set Subdomain
-                </Button>
+                <Space size="middle">
+                    <Button
+                        onClick={() => setIsCredentialsModalOpen(true)}
+                    >
+                        Set Credentials
+                    </Button>
+                    <Button
+                        onClick={() => setIsSubdomainModalOpen(true)}
+                    >
+                        Set Subdomain
+                    </Button>
+                </Space>
             </S.Container>
             <CredentialsModal
                 isOpen={isCredentialsModalOpen}
